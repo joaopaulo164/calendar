@@ -32,5 +32,14 @@
   <div class="card">
     <div ui-calendar='uiConfig.calendar' ng-model='eventSources' width='300' height='400'></div>
   </div>
+  <div class="list">
+    <div class="item" style="text-align: center;">
+      events in {{select_date}}
+    </div>
+    <div class="item balanced-bg" ng-repeat="event in events_in_select_date" >
+      {{event.title}}
+      <span>{{event.start}}</span>
+    </div>
+  </div>
 </body>
 </html>
